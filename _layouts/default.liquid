@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!-- Basic Page Needs -->
+  <meta charset="utf-8">
+{% if page.collection == "posts" %}
+  <title>{{ page.title }}</title>
+{% else %}
+  <title>egero.org</title>
+{% endif %}
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/egeroorg.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout -->
+  <div class="container">
+    <div class="row" style="margin-top: 10%">
+      <div class="two columns">
+        <h2><a href="/">egero.org</a></h2>
+        <p>Victor Egerö</p>
+        <p>High-Frequency Trading Developer</p>
+        <p><a href="/about">About</a></p>
+        <p><a href="/archives">Archives</a></p>
+        <p><a href="/rss.xml">Feed</a></p>
+      </div>
+      <div class="ten columns">
+        {% if page.collection == "posts" %}
+          {% include "post.liquid" %}
+        {% else %}
+          {{ page.content }}
+        {% endif %}
+      </div>
+    </div>
+    <div class="row" style="text-align: center;">
+      <div class="twelve columns">
+        <p>Copyright &copy; 2020 - Victor Egerö - Powered by
+          <a href="https://github.com/cobalt-org/cobalt.rs">cobalt.rs</a> &amp;
+        <a href="http://getskeleton.com">Skeleton</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- End Document -->
+
+</body>
+</html>
