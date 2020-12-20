@@ -1,0 +1,12 @@
+body {
+  background-color: whitesmoke;
+}
+
+h2 {
+  font-size: 3.7rem;
+}
+
+img.thumb25 {
+  max-width: 25%;
+  height: auto;
+}
